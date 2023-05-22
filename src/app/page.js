@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import Image from "next/image";
 import Slider from "@/components/layout/Slider"
@@ -10,6 +10,7 @@ import banner from "../../public/assets/banner/banner2.jpg"
 import Product from "@/components/layout/Trending";
 
 export default function Home() {
+
   return (
     <main>
       <Slider />
