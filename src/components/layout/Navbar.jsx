@@ -14,7 +14,7 @@ import {
 import {
     GiHamburgerMenu
 } from "react-icons/gi"
-import ThemeToggle from "@/components/ThemeToggle"
+// import ThemeToggle from "@/components/ThemeToggle"
 import Button from "@/components/ui/Button"
 import Image from "next/image"
 import logo from "../../../public/assets/logo/logo.png"
@@ -87,7 +87,7 @@ const Navbar = () => {
                 </div>
             </Drawer>
             <nav className='border-b shadow-md fixed top-0 z-50 w-full bg-light dark:bg-dark txt font-semibold'>
-                <div className="flex items-center gap-5 sm:gap-0 sm:justify-between border-b py-3 px-6 sm:px-2 sm:border-none">
+                <div className="flex items-center gap-5 sm:gap-0 sm:justify-between border-b py-3 px-6 sm:px-2 sm:border-none text-sm">
                     {/* logo */}
                     <div className="flex items-center gap-3">
                         <GiHamburgerMenu className="w-6 h-6 hidden sm:block" onClick={toggleDrawer("left", true)} />
@@ -121,7 +121,7 @@ const Navbar = () => {
                             <span className="md:hidden">Cart</span>
                         </div>
                         <div className="">
-                            <ThemeToggle />
+                            {/* <ThemeToggle /> */}
                         </div>
                     </div>
                 </div>

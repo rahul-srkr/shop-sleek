@@ -10,7 +10,6 @@ const SignOutButton = () => {
         <Button
             isLoading={isSigningOut}
             variant='ghost'
-            is
             onClick={async () => {
                 setIsSigningOut(true)
                 try {

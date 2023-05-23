@@ -32,25 +32,60 @@ export const authOptions = {
             clientSecret: getGoogleCredentials().clientSecret,
             profile(profile) {
                 return {
-                    id: '[redacted]',
+                    id: profile.sub,
                     name: profile.name,
                     email: profile.email,
                     image: profile.picture,
-                    mobile: "45454545"
+                    phoneNumber: {
+                        type: Number,
+                    },
+                    addresses: [
+                        {
+                            country: {
+                                type: String,
+                            },
+                            city: {
+                                type: String,
+                            },
+                            address1: {
+                                type: String,
+                            },
+                            address2: {
+                                type: String,
+                            },
+                            zipCode: {
+                                type: Number,
+                            },
+                            addressType: {
+                                type: String,
+                            },
+                        }
+                    ],
+                    role: {
+                        type: String,
+                        default: "user",
+                    },
+                    avatar: {
+                        type: String,
+                        required: true,
+                    },
                 }
-            },
+            }
         }),
     ],
     callbacks: {
-        async signIn({ account, profile }) {
-            if (account.provider === "google") {
-                return profile.email_verified && profile.email.endsWith("@gmail.com")
-            }
-            return true
+        async jwt({ token, user }) {
+            return token;
         },
         async session({ session, token }) {
-            session.user.id = token.sub
-            return session
+            if (token) {
+                session.user.id = token.id;
+                session.user.name = token.name;
+                session.user.email = token.email;
+                session.user.image = token.picture;
+            }
+
+            return session;
         },
         redirect() {
             return "/";
