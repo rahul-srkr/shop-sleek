@@ -12,7 +12,7 @@ const WearCard = ({ wear, name, discount = 10 }) => {
                     <p className="font-semibold txt">{name}</p>
                     <p className="text-xl sm:text-sm font-bold txt">{discount}% off</p>
                 </div>
-                <Button size="sm">Buy Now</Button>
+                <Button size="sm">Shop Now</Button>
             </div>
         </div>
     )

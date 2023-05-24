@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
       <body className={`dark:bg-dark bg-light text-light dark:text-dark w-full`}>
         <Providers>
           <Navbar />
-          {children}
+          <main className='mt-32 txt'>
+            {children}
+          </main>
           <Footer />
         </Providers>
       </body>

@@ -21,7 +21,7 @@ const Slider = () => {
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             }}
-            className="h-[20rem] mt-[7.2rem] sm:mt-[6.2rem] w-full relative">
+            className="h-[20rem] sm:mt-[6.2rem] w-full relative">
             <SwiperSlide className="relative after:absolute after:h-[20rem] after:w-full after:bg-gradient-to-t after:from-black after:from-30% after:to-transparent after:bottom-0 after:left-0 after:z-10 after:opacity-75">
                 <Slides
                     img={slide1}

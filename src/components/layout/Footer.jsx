@@ -1,6 +1,7 @@
 import { BsTwitter, BsFacebook, BsInstagram, BsPinterest, BsGlobe } from "react-icons/bs"
 import logo from "../../../public/assets/logo/logo.png"
 import Image from "next/image"
+import { categories } from "@/static/data"
 
 const Footer = () => {
     return (

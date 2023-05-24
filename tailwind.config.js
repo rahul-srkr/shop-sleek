@@ -15,12 +15,30 @@ module.exports = {
       backgroundColor: {
         dark: "#0a0a0f",
         light: "#ffffff",
+        sidebar: {
+          dark: "#14141f",
+          light: "#f0f0f5",
+          top: {
+            dark: "#0a0a0f",
+            light: "#d1d1e0"
+          }
+        },
         button: {
           dark: "#29293d",
           light: "#5c5c8a",
           hover: {
             dark: "#33334d",
             light: "#52527a"
+          },
+          seller: "#00cc7a",
+          logout: "#cc0000",
+          filter: {
+            dark: "#29293d",
+            light: "#e0e0eb",
+            active: {
+              dark: "#14141f",
+              light: "#c2c2d6"
+            }
           }
         },
         input: {
@@ -30,18 +48,22 @@ module.exports = {
         card: {
           dark: "#14141f",
           light: "#f0f0f5"
-        }
+        },
       },
       colors: {
-        dark: "#f0f0f5",
-        light: "#0a0a0f"
+        dark: "#e0e0eb",
+        light: "#1f1f2e"
       }
     },
     screens: {
-      xl: { max: "950px" },
-      lg: { max: "874px" },
-      md: { max: "600px" },
-      sm: { max: "510px" },
+      "5xl": { max: "1040px" },
+      "4xl": { max: "1020px" },
+      "3xl": { max: "920px" },
+      "2xl": { max: "820px" },
+      xl: { max: "720px" },
+      lg: { max: "620px" },
+      md: { max: "520px" },
+      sm: { max: "420px" },
       xs: { max: "320px" }
     }
   },

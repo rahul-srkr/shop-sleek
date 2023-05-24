@@ -1,5 +1,5 @@
 "use client"
-import SignIn from "@/components/SignIn"
+import SignIn from "@/components/layout/Buttons/auth/SignIn"
 
 const page = () => {
     return (
