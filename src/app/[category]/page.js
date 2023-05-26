@@ -52,7 +52,7 @@ const Page = () => {
                             <Sort />
                         </div>
                         <div>
-                            <h2 className={`text-3xl font-bold sm:text-xl mb-6 lg:text-xl`}>Kurt's</h2>
+                            <h2 className={`text-3xl font-bold sm:text-xl mb-6 lg:text-xl`}>Kurtas</h2>
                             <div className="grid grid-cols-4 gap-4 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 2xl:gap-1 2xl:grid-cols-2 4xl:gap-3 4xl:grid-cols-3">
                                 <ProductCard
                                     img={kurta}
