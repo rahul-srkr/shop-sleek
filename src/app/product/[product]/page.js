@@ -119,7 +119,7 @@ const page = () => {
                         </div>
                         <div className="mt-3">
                             <h2 className="text-lg font-semibold sm:text-base">Size & Fit</h2>
-                            <p className="font-medium mt-2 txt-primary sm:text-sm">The model (height 5.8") is wearing a size S</p>
+                            <p className="font-medium mt-2 txt-primary sm:text-sm">The model (height 5.8) is wearing a size S</p>
                         </div>
                         <div className="mt-3">
                             <h2 className="text-lg font-semibold sm:text-base">Material & Care</h2>
