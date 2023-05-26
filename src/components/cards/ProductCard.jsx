@@ -1,25 +1,24 @@
 import Image from "next/image"
 import Rating from '@mui/material/Rating';
 import { useState } from "react";
-import Button from "../ui/Button";
 
 const ProductCard = ({ img, name, price, discount, percent, review, star }) => {
     const [value, setValue] = useState(star);
     return (
-        <div className=" border bg-light dark:bg-dark txt shadow-md">
+        <div className=" border shadow-md bgc-initial">
             <div className="w-full">
                 <Image src={img} alt="kurta" width={500} height={500} className="w-full h-60 object-contain" />
             </div>
 
             <div className="w-full flex flex-col gap-1 p-2">
                 <p className="font-semibold max-w-[12rem] line-clamp-1">{name}</p>
-                <div className="flex items-center text-sm font-semibold text-gray-500">
+                <div className="flex items-center text-sm font-semibold txt-primary">
                     <Rating
                         value={value}
                         readOnly
                         precision={0.5}
                         size="small"
-                        style={{ color: "#03fca5" }}
+                        style={{ color: "#ff0066" }}
                     />
                     <span>{star}</span>
                     <span className="px-1 sm:hidden">|</span>
@@ -31,7 +30,7 @@ const ProductCard = ({ img, name, price, discount, percent, review, star }) => {
                     <span className="sm:hidden">{percent}% off</span>
                 </div>
                 <div className="flex items-end">
-                    <Button size={"md"}>Add To Cart</Button>
+                    <button className={`btn-primary p-2 rounded-sm whitespace-nowrap sm:p-1 sm:text-sm sm:px-2 font-semibold text-white`}>Add To Cart</button>
                 </div>
             </div>
         </div>

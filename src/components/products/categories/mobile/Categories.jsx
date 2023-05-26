@@ -10,9 +10,9 @@ const Categories = () => {
             {
                 Object.keys(categories).map(cat => <li key={nanoid()} className="relative">
                     <input type="checkbox" className="absolute h-7 top-0 inset-x-0 peer opacity-0" />
-                    <p className="text-lg font-semibold">{cat}</p>
+                    <p className="font-semibold">{cat}</p>
                     <FaChevronRight className="absolute h-4 w-4 top-1 right-0 transition-all duration-500 peer-checked:rotate-90" />
-                    <ul className="flex flex-col space-y-3 pl-3 overflow-hidden max-h-0 transition-all duration-500 peer-checked:max-h-[500rem] peer-checked:mt-3">
+                    <ul className="flex flex-col space-y-3 pl-3 overflow-hidden max-h-0 transition-all duration-500 peer-checked:max-h-[500rem] peer-checked:mt-3 text-sm">
                         {
                             Object.keys(categories[cat]).map(item => <li key={nanoid()} className="relative">
                                 <input type="checkbox" className="absolute h-7 top-0 inset-x-0 peer opacity-0" />

@@ -1,6 +1,6 @@
 "use client"
+import Button from "@/components/ui/Button";
 import { signIn } from "next-auth/react";
-import Button from "../../../ui/Button";
 import { useState } from "react";
 
 const SignIn = () => {

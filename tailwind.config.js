@@ -13,46 +13,90 @@ module.exports = {
         mon: ['var(--font-mon)', ...fontFamily.sans],
       },
       backgroundColor: {
-        dark: "#0a0a0f",
-        light: "#ffffff",
-        sidebar: {
-          dark: "#14141f",
-          light: "#f0f0f5",
-          top: {
-            dark: "#0a0a0f",
-            light: "#d1d1e0"
-          }
+        initial: {
+          dark: "#000000",
+          light: "#ffffff",
+        },
+        primary: {
+          light: "#e0e0eb",
+          dark: "#14141f"
+        },
+        secondary: {
+          light: "#c1c1d7",
+          dark: "#28283e"
+        },
+        tertiary: {
+          light: "#a2a2c3",
+          dark: "#3c3c5d"
+        },
+        quaternary: {
+
+        },
+        aubsequent: {
+
+        },
+        ancillary: {
+
         },
         button: {
-          dark: "#29293d",
-          light: "#5c5c8a",
-          hover: {
-            dark: "#33334d",
-            light: "#52527a"
-          },
-          seller: "#00cc7a",
-          logout: "#cc0000",
-          filter: {
+          initial: {
             dark: "#29293d",
-            light: "#e0e0eb",
-            active: {
-              dark: "#14141f",
-              light: "#c2c2d6"
+            light: "#5c5c8a",
+            hover: {
+              light: "#47476b",
+              dark: "#1f1f2e"
             }
-          }
+          },
+          primary: {
+            dark: "#29293d",
+            light: "#00b36b",
+            hover: {
+              light: "#00804d",
+              dark: "#1f1f2e"
+            }
+          },
+          secondary: {
+            light: "#ff0066",
+            dark: "#29293d",
+            hover: {
+              light: "#cc0052",
+              dark: "#1f1f2e"
+            }
+          },
+          tertiary: {
+            light: "#009933",
+            dark: "#29293d",
+            hover: {
+              light: "#006622",
+              dark: "#1f1f2e"
+            }
+          },
+          danger: {
+            color: "#cc0000",
+            hover: "#990000"
+          },
         },
         input: {
-          dark: "#14141f",
-          light: "#f0f0f5"
-        },
-        card: {
-          dark: "#14141f",
+          dark: "#1f1f2e",
           light: "#f0f0f5"
         },
       },
-      colors: {
-        dark: "#e0e0eb",
-        light: "#1f1f2e"
+      textColor: {
+        initial: {
+          dark: "#f2f2f2",
+          light: "#0d0d0d"
+        },
+        primary: {
+          dark: "#a6a6a6",
+          light: "#595959"
+        },
+        secondary: {
+          light: "#a6a6a6",
+          dark: "#595959"
+        },
+      },
+      boxShadow: {
+        sort: " 0px -127px 5px -3px rgba(0,0,0,0.59)"
       }
     },
     screens: {

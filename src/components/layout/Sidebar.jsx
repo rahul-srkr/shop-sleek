@@ -1,12 +1,11 @@
 import Drawer from '@mui/material/Drawer';
-import SignOutButton from './Buttons/auth/SignOut';
 import Link from 'next/link';
 import {
     FaUserAlt,
     FaChevronRight
 } from "react-icons/fa"
-import Categories from '../categories/mobile/Categories';
-import Seller from './Buttons/Seller';
+import SignOutButton from '../auth/SignOut';
+import Categories from '../products/categories/mobile/Categories';
 
 
 const Sidebar = ({ state, session, toggleDrawer }) => {
@@ -16,8 +15,8 @@ const Sidebar = ({ state, session, toggleDrawer }) => {
             open={state["left"]}
             onClose={toggleDrawer("left", false)}
         >
-            <div className="w-[250px] bg-sidebar-light dark:bg-sidebar-dark txt">
-                <div className="w-full px-2 py-4 bg-sidebar-top-light dark:bg-sidebar-top-dark">
+            <div className="w-[250px] bgc-initial flex flex-col flex-grow txt-initial">
+                <div className="w-full px-2 py-4 bgc-primary">
                     {
                         session ? <img src={session?.user.image} className="object-cover rounded-full w-20 h-20 mx-auto mb-3 border bg-white" /> :
                             <FaUserAlt className="w-12 h-12 mx-auto mb-3" />
@@ -35,11 +34,13 @@ const Sidebar = ({ state, session, toggleDrawer }) => {
 
                 </div>
                 <Categories />
-                <Seller classname={"mx-2 mt-4 text-lg font-semibold"} />
+                <button className={`flex whitespace-nowrap items-center justify-between p-1 bg-tertiary-light dark:bg-button-tertiary-dark hover:bg-button-tertiary-hover-light dark:hover:bg-button-tertiary-hover-dark text-white rounded-sm mx-2 mt-4 font-semibold gap-5`}>
+                    <span>Became a Seller</span>
+                    <FaChevronRight className="w-3 h-3" />
+                </button>
                 {
-                    session && <div className="w-[90%] mx-auto mt-4">
-                        <SignOutButton classname="w-full font-semibold text-lg" />
-                    </div>
+                    session &&
+                    <SignOutButton classname="font-semibold gap-5 !p-1 mt-4 mx-2" />
                 }
 
             </div>

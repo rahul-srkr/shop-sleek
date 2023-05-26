@@ -1,13 +1,10 @@
 'use client'
 
-import Image from "next/image";
-import Slider from "@/components/layout/Slider"
-import DealCard from "@/components/cards/DealCard";
-import TopDeals from "@/components/layout/TopDeals";
-import TopBrands from "@/components/layout/TopBrands";
-import WearCategories from "@/components/layout/WearCategories";
-import banner from "../../public/assets/banner/banner2.jpg"
-import Product from "@/components/layout/Trending";
+import Slider from "@/components/layout/Hero"
+import TopDeals from "@/components/events/TopDeals";
+import TopBrands from "@/components/events/TopBrands";
+import WearCategories from "@/components/events/WearCategories";
+import Product from "@/components/events/Trending";
 
 export default function Home() {
 

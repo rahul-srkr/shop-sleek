@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const DealCard = ({ img, brand }) => {
     return (
-        <div className="w-56 min-w-[14rem] h-56 sm:w-32 sm:h-32 sm:min-w-[8rem] flex border rounded-md shadow-lg bg-light dark:bg-dark">
+        <div className="w-56 min-w-[14rem] h-56 sm:w-32 sm:h-32 sm:min-w-[8rem] flex border rounded-md shadow-lg bgc-initial">
             <div className="w-1/2 h-full">
                 <Image src={img} alt="top deals" width={200} height={500} className="w-full h-full object-cover" />
             </div>

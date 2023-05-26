@@ -4,11 +4,47 @@
 
 @layer components {
   .icons {
-    @apply w-4 h-4 md:w-5 md:h-5 text-light dark:text-dark;
+    @apply w-4 h-4 md:w-5 md:h-5;
   }
 
-  .txt {
-    @apply text-light dark:text-dark;
+  .txt-initial {
+    @apply text-initial-light dark:text-initial-dark;
+  }
+
+  .txt-primary {
+    @apply text-primary-light dark:text-primary-dark;
+  }
+
+  .btn-initial {
+    @apply bg-button-initial-light dark:bg-button-initial-dark hover:bg-button-initial-hover-light dark:hover:bg-button-initial-hover-dark;
+  }
+
+  .btn-primary {
+    @apply bg-button-primary-light dark:bg-button-primary-dark hover:bg-button-primary-hover-light dark:hover:bg-button-primary-hover-dark;
+  }
+
+  .btn-secondary {
+    @apply bg-button-secondary-light dark:bg-button-secondary-dark hover:bg-button-secondary-hover-light dark:hover:bg-button-secondary-hover-dark;
+  }
+
+  .btn-tertiary {
+    @apply bg-button-tertiary-light dark:bg-button-tertiary-dark hover:bg-button-tertiary-hover-light dark:hover:bg-button-tertiary-hover-dark;
+  }
+
+  .bgc-initial {
+    @apply bg-initial-light dark:bg-initial-dark;
+  }
+
+  .bgc-primary {
+    @apply bg-primary-light dark:bg-primary-dark;
+  }
+
+  .bgc-secondary {
+    @apply bg-secondary-light dark:bg-secondary-dark;
+  }
+
+  .bgc-tertiary {
+    @apply bg-tertiary-light dark:bg-tertiary-dark;
   }
 }
 

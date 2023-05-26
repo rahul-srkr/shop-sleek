@@ -18,10 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={` ${montserrat.variable} font-mon`}>
-      <body className={`dark:bg-dark bg-light text-light dark:text-dark w-full`}>
+      <body className={`dark:bg-initial-dark bg-initial-light text-light dark:text-dark w-full txt-initial`}>
         <Providers>
           <Navbar />
-          <main className='mt-32 txt'>
+          <main className='mt-32'>
             {children}
           </main>
           <Footer />

@@ -2,7 +2,6 @@
 
 import { signOut } from 'next-auth/react'
 import { useState } from 'react'
-import Button from '../../../ui/Button'
 import { FiLogOut } from "react-icons/fi"
 import { Loader2 } from "lucide-react";
 
@@ -19,11 +18,15 @@ const SignOutButton = ({ classname }) => {
         }
     }
     return (
-        <div onClick={() => logout()} className={`flex items-center justify-between p-2 bg-button-logout text-white rounded-md whitespace-nowrap ${classname}`}>
-            {isSigningOut ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-            <div>Log Out</div>
-            <FiLogOut />
-        </div>
+        <button disabled={isSigningOut} onClick={() => logout()} className={`flex p-2 bg-button-danger-color hover:bg-button-danger-hover text-white rounded-sm whitespace-nowrap ${classname}`}>
+            {isSigningOut ?
+                <Loader2 className="h-4 w-4 animate-spin" /> :
+                <div className={`flex items-center justify-between w-full`}>
+                    <span>Log Out</span>
+                    <FiLogOut />
+                </div>
+            }
+        </button>
     )
 }
 

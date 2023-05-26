@@ -17,11 +17,12 @@ import ThemeToggle from "@/components/ThemeToggle"
 import Image from "next/image"
 import logo from "../../../public/assets/logo/logo.png"
 import { useSession } from 'next-auth/react'
-import Categories from "../categories/desktop/Categories"
+// import Categories from "../categories/desktop/Categories"
 import { useState } from "react"
-import SignOutButton from "./Buttons/auth/SignOut"
 import Link from "next/link"
 import Sidebar from "./Sidebar"
+import SignOutButton from "../auth/SignOut"
+import Categories from "../products/categories/desktop/Categories"
 
 const Navbar = () => {
     const [state, setState] = useState({
@@ -43,7 +44,7 @@ const Navbar = () => {
     return (
         <>
             <Sidebar state={state} toggleDrawer={toggleDrawer} session={session} />
-            <nav className='border-b shadow-md fixed top-0 z-50 w-full bg-light dark:bg-dark txt font-semibold'>
+            <nav className='border-b shadow-md fixed top-0 z-50 w-full font-semibold bgc-initial'>
                 <div className="flex items-center gap-5 md:gap-0 md:justify-between border-b py-3 px-6 md:px-2 md:border-none text-sm">
                     {/* logo */}
                     <div className="flex items-center gap-5">
@@ -57,7 +58,7 @@ const Navbar = () => {
                     {/* search bar */}
                     <div className="flex-grow flex md:hidden items-center">
                         <input type="search" className='bg-input-light dark:bg-input-dark focus:outline-none w-full p-2 rounded-tl-md rounded-bl-md' placeholder='Search for Products, Brand and More' />
-                        <div className="p-[.52rem] bg-button-light rounded-tr-md rounded-br-md">
+                        <div className="p-[.52rem] btn-secondary rounded-tr-md rounded-br-md">
                             <BiSearch className="w-5 h-5 text-white" />
                         </div>
                     </div>
@@ -86,8 +87,8 @@ const Navbar = () => {
                 </div>
 
                 <div className="w-full hidden relative px-2 pb-2 md:flex items-center">
-                    <input type="search" className='bg-input-light dark:bg-input-dark focus:outline-none w-full border p-[0.35rem] rounded-tl-md rounded-bl-md' placeholder='Search for Products, Brand and More' />
-                    <div className="p-[.55rem] bg-button-light rounded-tr-md rounded-br-md">
+                    <input type="search" className='bg-input-light dark:bg-input-dark focus:outline-none w-full p-[0.42rem] rounded-tl-md rounded-bl-md' placeholder='Search for Products, Brand and More' />
+                    <div className="p-[.55rem] bg-button-light rounded-tr-md rounded-br-md btn-secondary">
                         <BiSearch className="w-5 h-5 text-white" />
                     </div>
                 </div>
