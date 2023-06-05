@@ -1,11 +1,11 @@
 "use client"
 import SignIn from "@/components/auth/SignIn"
 
-const page = () => {
+const Page = () => {
     return (
         <>
             <SignIn />
         </>
     )
 }
-export default page
+export default Page

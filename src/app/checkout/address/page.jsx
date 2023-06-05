@@ -1,6 +1,6 @@
 import AddressCard from "@/components/cards/AddressCard"
 
-const page = () => {
+const Page = () => {
     return (
         <div className="flex flex-col gap-3">
             <AddressCard />
@@ -10,4 +10,4 @@ const page = () => {
         </div>
     )
 }
-export default page
+export default Page

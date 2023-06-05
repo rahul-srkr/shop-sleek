@@ -11,7 +11,7 @@ import MyAddressCard from "@/components/cards/MyAddressCard";
 import { toast } from "react-hot-toast";
 import { Loader2 } from "lucide-react";
 
-const page = () => {
+const Page = () => {
     const { status, data: session, update } = useSession()
     const [showModal, setShowModal] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -133,7 +133,7 @@ const page = () => {
                 <hr className="w-full bg-gray-400 my-3" />
                 <div className="font-semibold text-sm mb-1">Default Address</div>
                 {
-                    session.user?.addresses?.map(address => <MyAddressCard address={address} update={update} />)
+                    session.user?.addresses?.map(address => <MyAddressCard key={address._id} address={address} update={update} />)
                 }
 
             </div>
@@ -142,4 +142,4 @@ const page = () => {
 
     )
 }
-export default page
+export default Page
