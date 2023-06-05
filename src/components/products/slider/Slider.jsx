@@ -11,15 +11,15 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 
-import wear1 from "../../../../public/assets/wear-categories/active.webp"
+import wear1 from "../../../../public/assets/wear-categories/active.jpeg"
 import wear2 from "../../../../public/assets/wear-categories/casual.jpeg"
-import wear3 from "../../../../public/assets/wear-categories/Ethnic.webp"
-import wear4 from "../../../../public/assets/wear-categories/kids.webp"
-import wear5 from "../../../../public/assets/wear-categories/longe.webp"
-import wear6 from "../../../../public/assets/wear-categories/sleep.webp"
-import wear7 from "../../../../public/assets/wear-categories/sports.webp"
+import wear3 from "../../../../public/assets/wear-categories/Ethnic.jpeg"
+import wear4 from "../../../../public/assets/wear-categories/kids.jpeg"
+import wear5 from "../../../../public/assets/wear-categories/longe.jpeg"
+import wear6 from "../../../../public/assets/wear-categories/sleep.jpeg"
+import wear7 from "../../../../public/assets/wear-categories/sports.jpeg"
 import wear8 from "../../../../public/assets/wear-categories/western.jpeg"
-import wear9 from "../../../../public/assets/wear-categories/work.webp"
+import wear9 from "../../../../public/assets/wear-categories/work.jpeg"
 import Image from "next/image";
 
 const Slider = () => {

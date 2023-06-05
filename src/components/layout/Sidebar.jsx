@@ -34,7 +34,7 @@ const Sidebar = ({ state, session, toggleDrawer }) => {
 
                 </div>
                 <Categories />
-                <button className={`flex whitespace-nowrap items-center justify-between p-1 bg-tertiary-light dark:bg-button-tertiary-dark hover:bg-button-tertiary-hover-light dark:hover:bg-button-tertiary-hover-dark text-white rounded-sm mx-2 mt-4 font-semibold gap-5`}>
+                <button className={`flex whitespace-nowrap items-center justify-between p-1 btn-tertiary rounded-sm mx-2 mt-4 font-semibold gap-5`}>
                     <span>Became a Seller</span>
                     <FaChevronRight className="w-3 h-3" />
                 </button>

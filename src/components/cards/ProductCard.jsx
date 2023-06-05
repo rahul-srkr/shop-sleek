@@ -1,17 +1,19 @@
+"use client"
 import Image from "next/image"
 import Rating from '@mui/material/Rating';
 import { useState } from "react";
+import Link from "next/link";
 
 const ProductCard = ({ img, name, price, discount, percent, review, star }) => {
     const [value, setValue] = useState(star);
     return (
-        <div className=" border shadow-md bgc-initial">
+        <div className="border shadow-md bgc-initial">
             <div className="w-full">
                 <Image src={img} alt="kurta" width={500} height={500} className="w-full h-60 object-contain" />
             </div>
 
             <div className="w-full flex flex-col gap-1 p-2">
-                <p className="font-semibold max-w-[12rem] line-clamp-1">{name}</p>
+                <Link href={`/product/${name}`} className="font-semibold max-w-[12rem] line-clamp-1 block">{name}</Link>
                 <div className="flex items-center text-sm font-semibold txt-primary">
                     <Rating
                         value={value}

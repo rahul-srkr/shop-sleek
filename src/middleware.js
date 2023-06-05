@@ -10,10 +10,10 @@ export default withAuth(
         const isAuth = await getToken({ req })
         const isLoginPage = pathname.startsWith('/login')
 
-        // const sensitiveRoutes = ['/dashboard']
-        // const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
-        //     pathname.startsWith(route)
-        // )
+        const sensitiveRoutes = ['/my/profile', '/my/address']
+        const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
+            pathname.startsWith(route)
+        )
 
         if (isLoginPage) {
             if (isAuth) {
@@ -23,9 +23,9 @@ export default withAuth(
             return NextResponse.next()
         }
 
-        // if (!isAuth && isAccessingSensitiveRoute) {
-        //     return NextResponse.redirect(new URL('/login', req.url))
-        // }
+        if (!isAuth && isAccessingSensitiveRoute) {
+            return NextResponse.redirect(new URL('/login', req.url))
+        }
 
         // if (pathname === '/') {
         //     return NextResponse.redirect(new URL('/dashboard', req.url))
@@ -41,5 +41,5 @@ export default withAuth(
 )
 
 export const config = {
-    matchter: ['/', '/login'],
+    matchter: ['/my/profile', '/my/address', '/checkout/cart', '/checkout/address'],
 }

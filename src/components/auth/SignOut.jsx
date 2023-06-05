@@ -20,7 +20,7 @@ const SignOutButton = ({ classname }) => {
     return (
         <button disabled={isSigningOut} onClick={() => logout()} className={`flex p-2 bg-button-danger-color hover:bg-button-danger-hover text-white rounded-sm whitespace-nowrap ${classname}`}>
             {isSigningOut ?
-                <Loader2 className="h-4 w-4 animate-spin" /> :
+                <Loader2 className="h-4 w-4 animate-spin flex justify-center" /> :
                 <div className={`flex items-center justify-between w-full`}>
                     <span>Log Out</span>
                     <FiLogOut />

@@ -1,6 +1,6 @@
 import GoogleProvider from "next-auth/providers/google";
-import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
-import clientPromise from "./mongodb";
+import User from "@/model/User";
+import connect from "./dbConn";
 
 function getGoogleCredentials() {
     const clientId = process.env.GOOGLE_CLIENT_ID;
@@ -18,11 +18,9 @@ function getGoogleCredentials() {
 }
 
 export const authOptions = {
-    adapter: MongoDBAdapter(clientPromise),
     session: {
         strategy: "jwt",
     },
-
     pages: {
         signIn: "/login",
     },
@@ -30,51 +28,50 @@ export const authOptions = {
         GoogleProvider({
             clientId: getGoogleCredentials().clientId,
             clientSecret: getGoogleCredentials().clientSecret,
-            profile(profile) {
-                return {
-                    id: profile.sub,
-                    name: profile.name,
-                    email: profile.email,
-                    image: profile.picture,
-                    phoneNumber: {
-                        type: Number,
-                    },
-                    addresses: [
-                        {
-                            country: {
-                                type: String,
-                            },
-                            city: {
-                                type: String,
-                            },
-                            address1: {
-                                type: String,
-                            },
-                            address2: {
-                                type: String,
-                            },
-                            zipCode: {
-                                type: Number,
-                            },
-                            addressType: {
-                                type: String,
-                            },
-                        }
-                    ],
-                    role: {
-                        type: String,
-                        default: "user",
-                    },
-                    avatar: {
-                        type: String,
-                        required: true,
-                    },
-                }
-            }
         }),
     ],
     callbacks: {
-        async jwt({ token, user }) {
+        async jwt({ token }) {
+            try {
+                await connect()
+                const isUserAlreadyExist = await User.findOne({ email: token.email })
+                if (!isUserAlreadyExist) {
+                    const newUser = await new User({
+                        name: token.name,
+                        email: token.email,
+                        image: token.picture,
+                    })
+
+                    const error = newUser.validateSync();
+                    const user = await newUser.save()
+
+                    token.id = user._id
+                    token.name = user.name
+                    token.email = user.email
+                    token.image = user.image
+                    token.role = user.role
+                    token.mobile = user.mobile
+                    token.addresses = user.addresses
+                    token.gender = user.gender
+                    token.location = user.location
+                    return token
+                }
+
+                token.id = isUserAlreadyExist._id
+                token.name = isUserAlreadyExist.name
+                token.email = isUserAlreadyExist.email
+                token.image = isUserAlreadyExist.image
+                token.role = isUserAlreadyExist.role
+                token.mobile = isUserAlreadyExist.mobile
+                token.addresses = isUserAlreadyExist.addresses
+                token.gender = isUserAlreadyExist.gender
+                token.location = isUserAlreadyExist.location
+                return token
+
+
+            } catch (e) {
+                console.error(e);
+            }
             return token;
         },
         async session({ session, token }) {
@@ -82,7 +79,12 @@ export const authOptions = {
                 session.user.id = token.id;
                 session.user.name = token.name;
                 session.user.email = token.email;
-                session.user.image = token.picture;
+                session.user.mobile = token.mobile;
+                session.user.image = token.image;
+                session.user.addresses = token.addresses;
+                session.user.role = token.role;
+                session.user.gender = token.gender;
+                session.user.location = token.location;
             }
 
             return session;

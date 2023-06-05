@@ -5,7 +5,7 @@ import { categories } from "@/static/data"
 
 const Footer = () => {
     return (
-        <div className="flex items-center justify-between p-4 lg:flex-col lg:justify-center lg:gap-4 mt-4">
+        <footer className="flex items-center justify-between p-4 lg:flex-col lg:justify-center lg:gap-4 mt-4 w-full">
             <div className="flex items-center gap-4  lg:flex-col lg:justify-center lg:gap-4">
                 <Image src={logo} alt="logo" width={150} height={100} />
                 <div className="font-bold">©Shop Sleek Private Ltd. 2023</div>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <p className="font-bold">₹INR</p>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 export default Footer

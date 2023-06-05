@@ -1,8 +1,8 @@
-import Providers from '@/components/Providers'
 import './globals.css'
 import { Montserrat } from 'next/font/google'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import Provider from '@/components/providers/Provider'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -17,15 +17,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={` ${montserrat.variable} font-mon`}>
-      <body className={`dark:bg-initial-dark bg-initial-light text-light dark:text-dark w-full txt-initial`}>
-        <Providers>
+    <html lang="en">
+      <body className={`dark:bg-initial-dark bg-initial-light text-light dark:text-dark w-full txt-initial ${montserrat.variable} font-mon`}>
+        <Provider>
           <Navbar />
-          <main className='mt-32'>
+          <main className='mt-36'>
             {children}
           </main>
           <Footer />
-        </Providers>
+        </Provider>
       </body>
     </html>
   )

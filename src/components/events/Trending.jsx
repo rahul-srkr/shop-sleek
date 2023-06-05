@@ -1,6 +1,6 @@
 import ProductCard from "../cards/ProductCard"
 import kurta from "../../../public/assets/product/kurta.jpg"
-import sport from "../../../public/assets/wear-categories/sports.webp"
+import sport from "../../../public/assets/wear-categories/sports.jpeg"
 
 const Trending = () => {
     return (

@@ -14,20 +14,20 @@ module.exports = {
       },
       backgroundColor: {
         initial: {
-          dark: "#000000",
           light: "#ffffff",
+          dark: "#000000",
         },
         primary: {
+          light: "#f0f0f5",
+          dark: "#0a0a0f"
+        },
+        secondary: {
           light: "#e0e0eb",
           dark: "#14141f"
         },
-        secondary: {
-          light: "#c1c1d7",
-          dark: "#28283e"
-        },
         tertiary: {
-          light: "#a2a2c3",
-          dark: "#3c3c5d"
+          light: "#d1d1e0",
+          dark: "#1f1f2e"
         },
         quaternary: {
 
