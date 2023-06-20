@@ -17,7 +17,9 @@ const Categories = () => {
     const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
     const { data, mutate, error, isLoading } = useSWR(
-        "http://localhost:3000/api/category",
+        allCategories.length === 0 ?
+            "/api/category" :
+            null,
         fetcher
     )
 
