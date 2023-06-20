@@ -158,7 +158,7 @@ const AddImages = ({ files, setFiles, rejected, setRejected, filesIsEmpty, setFi
                         <p>Drop the files here ...</p> :
                         <div>
                             <AiOutlineCloudUpload className='w-6 h-6 mx-auto' />
-                            <p className='text-center text-sm'>Drag 'n' drop some files here, or click to select files</p>
+                            <p className='text-center text-sm'>Drag and drop some files here, or click to select files</p>
                         </div>
 
                 }

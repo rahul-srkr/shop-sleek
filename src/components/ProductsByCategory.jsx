@@ -1,7 +1,7 @@
 "use client"
 import ProductCard from './cards/ProductCard';
 import { useState } from 'react';
-import kurta from "../../../public/assets/product/kurta.jpg"
+import kurta from "../../public/assets/product/kurta.jpg"
 import { Filters, SmallScreenFilters } from './Filters';
 import { Sort, SmallScreenSort } from './Sort';
 import FilterController from './controller/FilterController';
