@@ -34,6 +34,7 @@ const AddressSchema = new mongoose.Schema({
         timestamps: true
     }
 )
+
 const SellerSchema = new mongoose.Schema({
     shopName: {
         type: String,

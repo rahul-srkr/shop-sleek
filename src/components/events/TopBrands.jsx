@@ -21,7 +21,7 @@ import brand19 from "../../../public/assets/top-brands/19-min-3.jpg"
 import brand20 from "../../../public/assets/top-brands/20-min-4.jpg"
 import brand21 from "../../../public/assets/top-brands/79.png"
 import brand22 from "../../../public/assets/top-brands/1-5.jpg"
-import Carousel from "../Carousel"
+import Carousel from "../ui/Carousel"
 
 const TopBrands = () => {
     return (

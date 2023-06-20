@@ -7,7 +7,7 @@ import Link from "next/link";
 const ProductCard = ({ img, name, price, discount, percent, review, star }) => {
     const [value, setValue] = useState(star);
     return (
-        <div className="border shadow-md bgc-initial">
+        <div className="border shadow-md bgc-primary">
             <div className="w-full">
                 <Image src={img} alt="kurta" width={500} height={500} className="w-full h-60 object-contain" />
             </div>

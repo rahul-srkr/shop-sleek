@@ -14,12 +14,12 @@ module.exports = {
       },
       backgroundColor: {
         initial: {
-          light: "#ffffff",
-          dark: "#000000",
-        },
-        primary: {
           light: "#f0f0f5",
           dark: "#0a0a0f"
+        },
+        primary: {
+          light: "#ffffff",
+          dark: "#000000",
         },
         secondary: {
           light: "#e0e0eb",
@@ -37,6 +37,10 @@ module.exports = {
         },
         ancillary: {
 
+        },
+        navbar: {
+          light: "#5c5c8a",
+          dark: "#29293d"
         },
         button: {
           initial: {
@@ -77,8 +81,8 @@ module.exports = {
           },
         },
         input: {
-          dark: "#1f1f2e",
-          light: "#f0f0f5"
+          light: "#ffffff",
+          dark: "#000000",
         },
       },
       textColor: {

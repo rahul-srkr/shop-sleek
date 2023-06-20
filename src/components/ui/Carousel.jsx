@@ -5,7 +5,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 const Carousel = ({ children, text }) => {
     let scrollCards = useRef()
     return (
-        <div className="w-full p-3 sm:p-2 mt-8 bgc-primary select-none">
+        <div className="w-full p-3 sm:p-2 mt-8 select-none">
             <div className="flex justify-between items-center">
                 <h2 className={`text-3xl font-bold sm:text-xl`}>{text}</h2>
                 <div className="flex gap-2 sm:hidden">

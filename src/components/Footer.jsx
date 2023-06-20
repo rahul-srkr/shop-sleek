@@ -1,9 +1,14 @@
+"use client"
 import { BsTwitter, BsFacebook, BsInstagram, BsPinterest, BsGlobe } from "react-icons/bs"
-import logo from "../../../public/assets/logo/logo.png"
+import logo from "../../public/assets/logo/logo.png"
 import Image from "next/image"
-import { categories } from "@/static/data"
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
+    const pathname = usePathname();
+    if (pathname.startsWith("/seller")) {
+        return
+    }
     return (
         <footer className="flex items-center justify-between p-4 lg:flex-col lg:justify-center lg:gap-4 mt-4 w-full">
             <div className="flex items-center gap-4  lg:flex-col lg:justify-center lg:gap-4">

@@ -1,8 +1,9 @@
 import './globals.css'
 import { Montserrat } from 'next/font/google'
-import Navbar from '@/components/layout/Navbar'
-import Footer from '@/components/layout/Footer'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import Provider from '@/components/providers/Provider'
+import Header from '@/components/Header'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -20,8 +21,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`dark:bg-initial-dark bg-initial-light text-light dark:text-dark w-full txt-initial ${montserrat.variable} font-mon`}>
         <Provider>
-          <Navbar />
-          <main className='mt-36'>
+          <Header />
+          {/* <Navbar /> */}
+          <main>
             {children}
           </main>
           <Footer />

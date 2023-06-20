@@ -8,7 +8,7 @@ import wear6 from "../../../public/assets/wear-categories/sleep.jpeg"
 import wear7 from "../../../public/assets/wear-categories/sports.jpeg"
 import wear8 from "../../../public/assets/wear-categories/western.jpeg"
 import wear9 from "../../../public/assets/wear-categories/work.jpeg"
-import Carousel from "../Carousel"
+import Carousel from "../ui/Carousel"
 
 const WearCategories = () => {
 

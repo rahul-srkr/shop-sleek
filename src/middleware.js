@@ -1,6 +1,8 @@
+// import { getServerSession } from 'next-auth'
 import { getToken } from 'next-auth/jwt'
 import { withAuth } from 'next-auth/middleware'
 import { NextResponse } from 'next/server'
+// import { authOptions } from './lib/auth'
 
 export default withAuth(
     async function middleware(req) {
@@ -8,6 +10,7 @@ export default withAuth(
 
         // Manage route protection
         const isAuth = await getToken({ req })
+
         const isLoginPage = pathname.startsWith('/login')
 
         const sensitiveRoutes = ['/my/profile', '/my/address']
@@ -27,6 +30,18 @@ export default withAuth(
             return NextResponse.redirect(new URL('/login', req.url))
         }
 
+        // if (isAuth) {
+        //     const session = await getServerSession(authOptions);
+        // }
+
+        if (pathname === "/seller") {
+            if (isAuth) {
+                if (isAuth.role === "seller") {
+                    return NextResponse.redirect(new URL('/seller/dashboard', req.url))
+                }
+            }
+        }
+
         // if (pathname === '/') {
         //     return NextResponse.redirect(new URL('/dashboard', req.url))
         // }
@@ -41,5 +56,5 @@ export default withAuth(
 )
 
 export const config = {
-    matchter: ['/my/profile', '/my/address', '/checkout/cart', '/checkout/address'],
+    matchter: ['/my/profile', '/my/address', '/checkout/cart', '/checkout/address', '/seller'],
 }

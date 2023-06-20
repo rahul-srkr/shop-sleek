@@ -16,7 +16,7 @@ import brand5 from "../../../public/assets/top-deals/brand/6123ced7720f29323f011
 import brand6 from "../../../public/assets/top-deals/brand/attachment_81641127.png"
 import brand7 from "../../../public/assets/top-deals/brand/attachment_89509990.png"
 import brand8 from "../../../public/assets/top-deals/brand/wrwqerwre.jpg"
-import Carousel from "../Carousel"
+import Carousel from "../ui/Carousel"
 
 const TopDeals = () => {
     return (

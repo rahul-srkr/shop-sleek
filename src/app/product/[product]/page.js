@@ -1,19 +1,19 @@
-import StarRating from "@/components/StarRating";
-import Slider from "@/components/products/slider/Slider";
+import StarRating from "@/components/ui/StarRating";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai"
 import { GrDeliver } from "react-icons/gr"
 import { CgDetailsMore } from "react-icons/cg"
 import { TbStars } from "react-icons/tb"
 import { AiFillStar } from "react-icons/ai"
+import ImageSlider from "@/components/ui/ImageSlider";
 
 
 const page = () => {
     return (
-        <div className="p-2">
+        <div className="p-2 mt-40">
             <div className="text-sm">Home/Clothing/Women Clothing/Dresses/SASSAFRAS Dresses: More By SASSAFRAS</div>
             <div className="mt-4 flex gap-6 xl:flex-col xl:gap-4">
                 <div className="w-[60%] xl:w-full">
-                    <Slider />
+                    <ImageSlider />
                 </div>
                 <div className="px-2 w-[40%] xl:w-full">
                     {/* title */}

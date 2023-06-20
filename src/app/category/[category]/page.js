@@ -1,10 +1,10 @@
-import ProductsByCategory from "@/components/products/ProductsByCategory"
+import ProductsByCategory from "@/components/ProductsByCategory"
 
 const Page = () => {
 
     return (
-        <>
-            <div className='mb-8 md:hidden  px-2'>
+        <div className="mt-40">
+            <div className='mb-8 md:hidden px-2'>
                 <div className='text-sm mb-2 txt-primary'>Home/Kurtis For Women</div>
                 <div className='flex items-center gap-1 text-sm '>
                     <h1 className='font-semibold'>Kurtis For Women</h1>
@@ -13,7 +13,7 @@ const Page = () => {
                 </div>
             </div>
             <ProductsByCategory />
-        </>
+        </div>
     )
 }
 export default Page

@@ -54,9 +54,9 @@ export const authOptions = {
                     token.addresses = user.addresses
                     token.gender = user.gender
                     token.location = user.location
+                    token.seller = user.seller || null
                     return token
                 }
-
                 token.id = isUserAlreadyExist._id
                 token.name = isUserAlreadyExist.name
                 token.email = isUserAlreadyExist.email
@@ -66,6 +66,7 @@ export const authOptions = {
                 token.addresses = isUserAlreadyExist.addresses
                 token.gender = isUserAlreadyExist.gender
                 token.location = isUserAlreadyExist.location
+                token.seller = isUserAlreadyExist.seller || null
                 return token
 
 
@@ -85,6 +86,7 @@ export const authOptions = {
                 session.user.role = token.role;
                 session.user.gender = token.gender;
                 session.user.location = token.location;
+                session.user.seller = token.seller;
             }
 
             return session;
